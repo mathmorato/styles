@@ -434,7 +434,7 @@
             <text macro="translator"/>
             <text macro="edition"/>
             <text macro="publisher"/>
-            <text macro="issued-year"/>
+            <text macro="issued-year" suffix="."/>
             <text macro="locators"/>
             <text macro="access"/>
             <group prefix="(" suffix=").">
