@@ -161,9 +161,9 @@
         </date>
       </if>
       <else>
-          <text term="available at" suffix=": "/>
+          <text term="available at" text-case="capitalize-first" suffix=": "/>
           <text variable="URL"/>
-          <text term="accessed" suffix=": "/>
+          <text term="accessed" text-case="capitalize-first"  suffix=": "/>
           <date variable="accessed" prefix=". ">
           <date-part name="day" suffix=" "/>
           <date-part name="month" form="short" suffix=" " text-case="lowercase"/>
