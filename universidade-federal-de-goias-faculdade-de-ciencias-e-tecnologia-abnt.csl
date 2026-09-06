@@ -93,7 +93,7 @@
         </names>
       </if>
       <else-if type="entry-dictionary entry-encyclopedia" match="any">
-        <text value="In" font-weight="bold"/>
+        <text value="in" font-weight="bold"/>
         <text value=": "/>
         <names variable="author">
           <name name-as-sort-order="all" sort-separator=", " delimiter="; " delimiter-precedes-last="always">
