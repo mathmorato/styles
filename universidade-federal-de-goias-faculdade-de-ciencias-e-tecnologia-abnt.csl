@@ -150,16 +150,20 @@
   <macro name="access">
     <choose>
       <if type="article-magazine article-journal" match="any">
-        <text variable="URL" prefix="Disponível em: "/>
-        <date variable="accessed" prefix=". Acesso em: ">
+          <text term="available at" suffix=": "/>
+          <text variable="URL"/>
+          <text term="accessed" suffix=": "/>
+          <date variable="accessed" prefix=". ">
           <date-part name="day" suffix=" "/>
           <date-part name="month" form="short" suffix=" " text-case="lowercase"/>
           <date-part name="year"/>
         </date>
       </if>
       <else>
-        <text variable="URL" prefix="Disponível em: "/>
-        <date variable="accessed" prefix=". Acesso em: ">
+          <text term="available at" suffix=": "/>
+          <text variable="URL"/>
+          <text term="accessed" suffix=": "/>
+          <date variable="accessed" prefix=". ">
           <date-part name="day" suffix=" "/>
           <date-part name="month" form="short" suffix=" " text-case="lowercase"/>
           <date-part name="year"/>
