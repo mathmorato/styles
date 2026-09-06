@@ -414,31 +414,29 @@
                 <!-- use field 'history' for publisher -->
                 <text variable="references" font-weight="bold"/>
                 <!-- On Zotero, use field 'extra' for publication place -->
-                <text variable="note"/>
               </group>
             <text macro="locators"/>
             <text macro="access"/>
           </group>
         </if>
-        <else-if type="map">
+        <else-if type="map" delimiter=". ">
           <group>
-            <text macro="author" suffix=". "/>
-            <text macro="title" suffix=", "/>
-            <text macro="issued" suffix=". "/>
-            <text variable="note" suffix=". "/>
-            <text macro="access" suffix=". "/>
+            <text macro="author"/>
+            <text macro="title"/>
+            <text macro="issued"/>
+            <text macro="access"/>
           </group>
         </else-if>
-        <else-if type="book">
+        <else-if type="book" delimiter=". ">
           <group>
-            <text macro="author" suffix=". "/>
-            <text macro="title" suffix=". "/>
-            <text macro="translator" suffix=". "/>
-            <text macro="edition" suffix=". "/>
-            <text macro="publisher" suffix=", "/>
-            <text macro="issued-year" suffix=". "/>
+            <text macro="author"/>
+            <text macro="title"/>
+            <text macro="translator"/>
+            <text macro="edition"/>
+            <text macro="publisher"/>
+            <text macro="issued-year"/>
             <text macro="locators"/>
-            <text macro="access" suffix=". "/>
+            <text macro="access"/>
             <group prefix="(" suffix=").">
               <text variable="collection-title"/>
               <text variable="collection-number" prefix=", "/>
@@ -447,7 +445,7 @@
         </else-if>
         <else-if type="chapter">
           <!-- paper in conference too -->
-          <group>
+          <group >
             <text macro="author" suffix=", "/>
             <text macro="title" suffix=". "/>
             <text macro="container-contributors" suffix=", "/>
@@ -473,7 +471,6 @@
             <text macro="container-title" suffix=", "/>
             <text variable="collection-title" suffix=". "/>
             <!-- use field 'extra' place -->
-            <text variable="note" suffix=", "/>
             <text macro="place" suffix=", "/>
             <text macro="edition" suffix=", "/>
             <text macro="issued" suffix=". "/>
@@ -491,7 +488,6 @@
             <text macro="container-title" suffix=", "/>
             <text variable="collection-title" suffix=". "/>
             <!-- use field 'extra' place -->
-            <text variable="note" suffix=", "/>
             <text macro="edition" suffix=", "/>
             <text macro="locators" suffix=", "/>
             <text macro="issued" suffix=". "/>
@@ -535,8 +531,6 @@
             <text macro="genre" prefix=" [" suffix="]. "/>
             <text variable="DOI" prefix="DOI: " suffix=". "/>
             <text macro="access" suffix="."/>
-            <!-- On Zotero, use field 'extra' for notes.-->
-            <text variable="note" prefix=" (" suffix=")."/>
           </group>
         </else-if>
         <else-if type="paper-conference">
@@ -545,8 +539,6 @@
           <text macro="event" suffix=", "/>
           <text variable="volume" suffix=", "/>
           <text macro="issued" suffix=". "/>
-          <!-- On Zotero, use field 'extra' for notes/event location.-->
-          <text variable="note" suffix=". "/>
           <text macro="container-title"/>
           <group delimiter=". " suffix=". ">
             <group delimiter=", ">
