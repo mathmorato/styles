@@ -255,18 +255,9 @@
   <macro name="issued">
     <choose>
       <if variable="issued" match="any">
-        <group>
-          <choose>
-            <if type="book chapter" match="none">
-              <date variable="issued">
-                <date-part name="year" form="short"/>
-              </date>
-            </if>
-          </choose>
-          <date variable="issued">
-            <date-part name="year"/>
-          </date>
-        </group>
+        <date variable="issued">
+          <date-part name="year"/>
+        </date>
       </if>
       <else>
         <text value="[S.d.]"/>
