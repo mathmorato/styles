@@ -29,16 +29,17 @@
       <term name="month-10" form="short">out.</term>
       <term name="month-11" form="short">nov.</term>
       <term name="month-12" form="short">dez.</term>
-      <term name="editor" form="short">ed</term>
       <term name="editor" form="short">org</term>
       <term name="collection-editor" form="short">org</term>
       <term name="translator">Tradução</term>
+      <term name="no-place" form="short">[s.l.]</term>
+      <term name="no-publisher" form="short">[s.n.]</term>
     </terms>
   </locale>
   <macro name="container-contributors">
     <choose>
       <if type="chapter">
-        <text term="in" text-case="capitalize-first"/>
+        <text term="in" text-case="capitalize-first" font-weight="bold"/>
         <text value=": "/>
         <names variable="container-author" delimiter=", ">
           <name name-as-sort-order="all" sort-separator=", " initialize-with=". " delimiter=", " delimiter-precedes-last="always">
@@ -150,9 +151,9 @@
   <macro name="access">
     <choose>
       <if type="article-magazine article-journal" match="any">
-          <text term="available at" suffix=": "/>
+          <text term="available at" text-case="capitalize-first" suffix=": "/>
           <text variable="URL"/>
-          <text term="accessed" suffix=": "/>
+          <text term="accessed" text-case="capitalize-first" suffix=": "/>
           <date variable="accessed" prefix=". ">
           <date-part name="day" suffix=" "/>
           <date-part name="month" form="short" suffix=" " text-case="lowercase"/>
@@ -219,7 +220,7 @@
               <text variable="publisher-place"/>
             </if>
             <else>
-              <text value="[S.l.]"/>
+              <text term="no-place" form="short"/>
             </else>
           </choose>
           <choose>
@@ -227,21 +228,22 @@
               <text variable="publisher"/>
             </if>
             <else>
-              <text value="[s.n.]"/>
+              <text term="no-publisher" form="short"/>
             </else>
           </choose>
         </group>
       </if>
       <else>
-        <text value="[S.l: s.n.]"/>
+        <text term="no-place" form="short"/>
+        <text value=": "/>
+        <text term="no-publisher" form="short"/>
       </else>
     </choose>
   </macro>
   <macro name="event">
     <choose>
       <if type="paper-conference" match="any">
-        <text value="In" font-weight="normal"/>
-        <text value=": "/>
+        <text term="in" text-case="capitalize-first" suffix=": "/>
         <text variable="event" font-weight="bold"/>
       </if>
       <else>
