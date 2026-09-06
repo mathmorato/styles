@@ -312,7 +312,8 @@
             <date-part prefix=" " name="year"/>
           </date>
           <text variable="section" prefix="Sec. "/>
-          <text variable="page" prefix="p. " suffix="."/>
+          <label variable="page" form="short" suffix=" "/>
+          <text variable="page" suffix="."/>
         </group>
       </if>
       <else-if match="any" type="article-journal article-magazine article-newspaper">
