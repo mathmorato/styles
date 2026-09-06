@@ -152,9 +152,9 @@
     <choose>
       <if type="article-magazine article-journal" match="any">
           <text term="available at" text-case="capitalize-first" suffix=": "/>
-          <text variable="URL"/>
+          <text variable="URL" suffix =". "/>
           <text term="accessed" text-case="capitalize-first" suffix=": "/>
-          <date variable="accessed" prefix=". ">
+          <date variable="accessed">
           <date-part name="day" suffix=" "/>
           <date-part name="month" form="short" suffix=" " text-case="lowercase"/>
           <date-part name="year"/>
@@ -162,9 +162,9 @@
       </if>
       <else>
           <text term="available at" text-case="capitalize-first" suffix=": "/>
-          <text variable="URL"/>
+          <text variable="URL" suffix =". "/>
           <text term="accessed" text-case="capitalize-first"  suffix=": "/>
-          <date variable="accessed" prefix=". ">
+          <date variable="accessed">
           <date-part name="day" suffix=" "/>
           <date-part name="month" form="short" suffix=" " text-case="lowercase"/>
           <date-part name="year"/>
