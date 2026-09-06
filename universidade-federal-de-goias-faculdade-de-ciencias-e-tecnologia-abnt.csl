@@ -419,16 +419,16 @@
             <text macro="access"/>
           </group>
         </if>
-        <else-if type="map" delimiter=". ">
-          <group>
+        <else-if type="map">
+          <group  delimiter=". ">
             <text macro="author"/>
             <text macro="title"/>
             <text macro="issued"/>
             <text macro="access"/>
           </group>
         </else-if>
-        <else-if type="book" delimiter=". ">
-          <group>
+        <else-if type="book">
+          <group  delimiter=". ">
             <text macro="author"/>
             <text macro="title"/>
             <text macro="translator"/>
