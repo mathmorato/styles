@@ -199,13 +199,13 @@
   <macro name="publisher">
     <choose>
       <if match="any" variable="publisher-place publisher">
-        <group delimiter=", ">
+        <group delimiter=": ">
           <choose>
             <if variable="publisher-place">
               <text variable="publisher-place"/>
             </if>
             <else>
-              <text term="no-place" form="short"/>
+              <text term="no-place" form="short" prefix="[" suffix="]"/>
             </else>
           </choose>
           <choose>
@@ -213,15 +213,16 @@
               <text variable="publisher"/>
             </if>
             <else>
-              <text term="no-publisher" form="short"/>
+              <text term="no-publisher" form="short" prefix="[" suffix="]"/>
             </else>
           </choose>
         </group>
       </if>
       <else>
-        <text term="no-place" form="short"/>
-        <text value=": "/>
-        <text term="no-publisher" form="short"/>
+        <group delimiter=": " prefix="[" suffix="]">
+          <text term="no-place" form="short"/>
+          <text term="no-publisher" form="short"/>
+        </group>
       </else>
     </choose>
   </macro>
