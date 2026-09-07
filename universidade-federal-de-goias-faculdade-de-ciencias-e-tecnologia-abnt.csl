@@ -151,20 +151,20 @@
   <macro name="access">
     <choose>
       <if type="article-magazine article-journal" match="any">
-          <text term="available at" text-case="capitalize-first" suffix=": "/>
-          <text variable="URL" suffix =". "/>
-          <text term="accessed" text-case="capitalize-first" suffix=": "/>
-          <date variable="accessed">
+        <text term="available at" text-case="capitalize-first" suffix=": "/>
+        <text variable="URL" suffix=". "/>
+        <text term="accessed" text-case="capitalize-first" suffix=": "/>
+        <date variable="accessed">
           <date-part name="day" suffix=" "/>
           <date-part name="month" form="short" suffix=" " text-case="lowercase"/>
           <date-part name="year"/>
         </date>
       </if>
       <else>
-          <text term="available at" text-case="capitalize-first" suffix=": "/>
-          <text variable="URL" suffix =". "/>
-          <text term="accessed" text-case="capitalize-first"  suffix=": "/>
-          <date variable="accessed">
+        <text term="available at" text-case="capitalize-first" suffix=": "/>
+        <text variable="URL" suffix=". "/>
+        <text term="accessed" text-case="capitalize-first" suffix=": "/>
+        <date variable="accessed">
           <date-part name="day" suffix=" "/>
           <date-part name="month" form="short" suffix=" " text-case="lowercase"/>
           <date-part name="year"/>
@@ -401,17 +401,17 @@
             <text macro="author"/>
             <text macro="number"/>
             <text macro="title"/>
-              <group delimiter=", ">
-                <!-- use field 'history' for publisher -->
-                <text variable="references" font-weight="bold"/>
-                <!-- On Zotero, use field 'extra' for publication place -->
-              </group>
+            <group delimiter=", ">
+              <!-- use field 'history' for publisher -->
+              <text variable="references" font-weight="bold"/>
+              <!-- On Zotero, use field 'extra' for publication place -->
+            </group>
             <text macro="locators"/>
             <text macro="access"/>
           </group>
         </if>
         <else-if type="map">
-          <group  delimiter=". ">
+          <group delimiter=". ">
             <text macro="author"/>
             <text macro="title"/>
             <text macro="issued"/>
@@ -419,7 +419,7 @@
           </group>
         </else-if>
         <else-if type="book">
-          <group  delimiter=". ">
+          <group delimiter=". ">
             <text macro="author"/>
             <text macro="title"/>
             <text macro="translator"/>
@@ -436,7 +436,7 @@
         </else-if>
         <else-if type="chapter">
           <!-- paper in conference too -->
-          <group >
+          <group>
             <text macro="author" suffix=", "/>
             <text macro="title" suffix=". "/>
             <text macro="container-contributors" suffix=", "/>
