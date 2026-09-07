@@ -15,7 +15,7 @@
     <updated>2026-09-06T17:05:00+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
-  <locale xml:lang="pt-BR">
+  <locale xml:lang="pt">
     <terms>
       <term name="month-01" form="short">jan.</term>
       <term name="month-02" form="short">fev.</term>
